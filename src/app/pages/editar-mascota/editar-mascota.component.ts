@@ -36,6 +36,7 @@ export class EditarMascotaComponent implements OnInit {
     this.editarMascotaForm = this.formBuilder.group({
       nombre: ['', [Validators.required]],
       fechaDeLlegada: ['', [Validators.required]],
+      tipo: ['', [Validators.required]],  // Agregado para el tipo de mascota
       estadoAdopcion: ['', [Validators.required]],
       genero: ['', [Validators.required]],
       descripcionLlegada: ['', [Validators.required]],
@@ -49,6 +50,7 @@ export class EditarMascotaComponent implements OnInit {
       this.editarMascotaForm.setValue({
         nombre: data['nombre'],
         fechaDeLlegada: data['fechaDeLlegada'],
+        tipo: data['tipo'],  // Agregado para el tipo de mascota
         estadoAdopcion: data['estadoAdopcion'],
         genero: data['genero'],
         descripcionLlegada: data['descripcionLlegada'],

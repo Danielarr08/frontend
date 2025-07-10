@@ -31,6 +31,7 @@ export class AgregarMascotaComponent {
       nombre: ['', [Validators.required]],
       fechaDeLlegada: ['', [Validators.required]],
       estadoAdopcion: ['', [Validators.required]],
+      tipo: ['', [Validators.required]],
       genero: ['', [Validators.required]],
       descripcionLlegada: ['', [Validators.required]],
       esterilizado: [null]

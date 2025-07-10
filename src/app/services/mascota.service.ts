@@ -9,7 +9,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 export class MascotaService {
 
   // Atributos
-  baseUri: string = 'http://localhost:4000/api';  // Cambia esto con la URL de tu backend de mascotas
+  baseUri: string = 'https://backend-pxqy.onrender.com/api'; 
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }

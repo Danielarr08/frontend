@@ -14,6 +14,7 @@
                     <tr>
                         <th>Nombre</th>
                         <th>Fecha de Llegada</th>
+                        <th>Tipo</th> <!-- Nueva columna para Tipo de Mascota -->
                         <th>Género</th>
                         <th>Estado de Adopción</th>
                         <th>Descripción</th>
@@ -26,6 +27,7 @@
                         <tr>
                             <td>{{mascota.nombre}}</td>
                             <td>{{mascota.fechaDeLlegada | date: 'dd/MM/yyyy'}}</td>
+                            <td>{{mascota.tipo}}</td> <!-- Mostramos el tipo de mascota -->
                             <td>{{mascota.genero}}</td>
                             <td [ngClass]="getRowColor(mascota.estadoAdopcion)">
                                 {{mascota.estadoAdopcion}}

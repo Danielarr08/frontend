@@ -28,7 +28,23 @@
                     </div>
                     }
                 </div>
-
+                
+                <!-- Tipo de mascota -->
+                <div class="form-group">
+                    <label for="tipo"><i class="fas fa-paw"></i> Tipo de Mascota</label>
+                    <select class="form-control" formControlName="tipo">
+                        <option value="" disabled selected>Seleccionar</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <!-- Mensaje de error de validación -->
+                    @if (enviado && myForm['tipo'].invalid) {
+                    <div class="error-message">
+                        El tipo de mascota es obligatorio.
+                    </div>
+                    }
+                </div>
                 <!-- Género -->
                 <div class="form-group">
                     <label for="genero"><i class="fas fa-genderless"></i> Género</label>

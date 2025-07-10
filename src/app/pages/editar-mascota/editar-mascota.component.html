@@ -17,6 +17,16 @@
                         <label for="fechaDeLlegada"><i class="fas fa-calendar-alt"></i> Fecha de Llegada</label>
                         <input type="date" class="form-control" formControlName="fechaDeLlegada" />
                     </div>
+                    <!-- Tipo de mascota -->
+                    <div class="form-group">
+                        <label for="tipo"><i class="fas fa-paw"></i> Tipo de Mascota</label>
+                        <select class="form-control" formControlName="tipo">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Otro">Otro</option>
+                        </select> 
+                    </div>   
 
                     <!-- Estado de adopción -->
                     <div class="form-group">
