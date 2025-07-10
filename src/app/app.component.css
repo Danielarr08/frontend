@@ -1,0 +1,81 @@
+/* Fondo personalizado para la navbar */
+.bg-custom {
+    background-color: #004d40 !important; /* Color verde oscuro */
+    padding-left: 1cm; /* Margen izquierdo de 1cm */
+    padding-right: 1cm; /* Margen derecho de 1cm */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil para la navbar */
+}
+
+/* Estilo para los enlaces del menú */
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Blanco para el texto de los enlaces */
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover en los enlaces del menú */
+.navbar-nav .nav-link:hover {
+    color: #004d40 !important; /* Verde oscuro para el hover */
+    background-color: #80cbc4 !important; /* Fondo verde claro para hover */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Estilo para los iconos dentro de los enlaces */
+.navbar-nav .nav-link i {
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Animación en los iconos */
+}
+
+/* Hover efecto en los iconos */
+.navbar-nav .nav-link:hover i {
+    transform: rotate(10deg); /* Efecto de rotación en los iconos */
+}
+
+/* Título de la navbar */
+.navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de hover en el logo de la navbar */
+.navbar-brand:hover {
+    color: #80cbc4 !important; /* Al pasar el mouse, el color cambia a verde claro */
+    transform: scale(1.1); /* Aumento en tamaño del logo */
+}
+
+/* Ajustes para el fondo de la navbar cuando está colapsado */
+.navbar-toggler-icon {
+    background-color: #80cbc4 !important; /* Color de la barra de menú en dispositivos pequeños */
+}
+
+/* Estilo para los elementos activos del menú */
+.navbar-nav .nav-link.active {
+    color: #004d40 !important; /* Color verde oscuro para el enlace activo */
+    background-color: #80cbc4 !important; /* Fondo verde claro para el enlace activo */
+    border-radius: 8px;
+    padding: 12px 18px;
+}
+
+/* Para los textos en los enlaces */
+.nav-text {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Aumentar tamaño de los enlaces en pantallas pequeñas */
+        padding: 12px 15px; /* Ajustar el padding en pantallas pequeñas */
+    }
+
+    .navbar-toggler-icon {
+        background-color: #004d40 !important; /* Color para los iconos del toggle en móviles */
+    }
+}

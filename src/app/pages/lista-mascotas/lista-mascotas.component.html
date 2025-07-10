@@ -1,0 +1,52 @@
+<div class="container">
+    <h2 class="text-center mb-5"><i class="fas fa-paw"></i> Lista de Mascotas</h2>
+
+    <!-- Si no hay mascotas en la lista -->
+    @if(listaMascotas.length <= 0) {
+        <div class="text-center text-muted">
+            <p>No hay mascotas registradas. ¡Agrega la tuya y compártela con el mundo!</p>
+        </div>
+    } @else {
+        <!-- Si hay mascotas en la lista -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha de Llegada</th>
+                        <th>Género</th>
+                        <th>Estado de Adopción</th>
+                        <th>Descripción</th>
+                        <th>Esterilizado</th> <!-- Nueva columna -->
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(mascota of listaMascotas; track mascota._id; let i = $index) {
+                        <tr>
+                            <td>{{mascota.nombre}}</td>
+                            <td>{{mascota.fechaDeLlegada | date: 'dd/MM/yyyy'}}</td>
+                            <td>{{mascota.genero}}</td>
+                            <td [ngClass]="getRowColor(mascota.estadoAdopcion)">
+                                {{mascota.estadoAdopcion}}
+                            </td>
+                            <td>{{mascota.descripcionLlegada}}</td>
+                            <td>{{mascota.esterilizado ? 'Sí' : 'No'}}</td> <!-- Mostramos "Sí" o "No" para esterilizado -->
+                            <td>
+                                <!-- Contenedor de los botones en línea -->
+                                <div class="btn-actions">
+                                    <a [routerLink]="['/editar-mascota', mascota._id]" class="btn-circle edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a (click)="eliminarMascota(mascota, i)" class="btn-circle delete">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

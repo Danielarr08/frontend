@@ -1,0 +1,118 @@
+/* Estilo de la tabla */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #e8f5e9; /* Fondo verde suave para toda la tabla */
+    color: black; /* Texto negro para mayor contraste */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para las celdas */
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Separadores sutiles entre filas */
+}
+
+/* Estilo de filas alternas: blanco y verde suave */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffffff; /* Fondo blanco para filas impares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #d0f5d1; /* Fondo verde muy suave para filas pares */
+}
+
+/* Colores de las palabras de estado de adopción */
+.bg-rojo {
+    background-color: #dc3545 !important; /* Rojo para "Disponible" */
+    color: white !important;
+}
+
+.bg-amarillo {
+    background-color: #ffc107 !important; /* Amarillo para "En proceso" */
+    color: black !important;
+}
+
+.bg-verde {
+    background-color: #28a745 !important; /* Verde para "Adoptada" */
+    color: white !important;
+}
+
+/* Estilo del contenedor del formulario (transparente) */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px; /* Espaciado superior */
+    margin-bottom: 5cm; /* Espacio de 5cm en la parte inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    max-width: 1000px; /* Establece un ancho máximo para el formulario */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2; /* Asegura que el formulario quede por encima del fondo */
+}
+
+/* Margen entre el título y la tabla */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Estilo para los botones con iconos en círculo */
+.btn-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Botón de editar - amarillo */
+.btn-circle.edit {
+    background-color: #ffc107; /* Amarillo para "Editar" */
+}
+
+.btn-circle.edit:hover {
+    background-color: #e0a800; /* Amarillo más oscuro en hover */
+}
+
+/* Botón de eliminar - rojo */
+.btn-circle.delete {
+    background-color: #dc3545; /* Rojo para "Eliminar" */
+}
+
+.btn-circle.delete:hover {
+    background-color: #c82333; /* Rojo más oscuro en hover */
+}
+
+/* Eliminar el texto dentro de los botones (solo los íconos) */
+.btn-circle span {
+    display: none; /* Elimina la leyenda dentro del círculo */
+}
+
+/* Asegurarse de que los botones estén en horizontal con separación de 1cm */
+.btn-actions {
+    display: flex;
+    justify-content: start;
+    gap: 0.5cm; /* Separa los botones 1cm */
+}
+
+/* Margen entre el título y la tabla */
+h2 {
+    margin-bottom: 5px !important; /* Usamos un margen más pequeño y lo forzamos */
+}

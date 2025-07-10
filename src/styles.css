@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* Asegurarse que el fondo cubra toda la página */
+body {
+    background: url('https://img.freepik.com/vector-gratis/marco-vector-perros-sobre-fondo-blanco_53876-127700.jpg?semt=ais_hybrid&w=740') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija mientras se hace scroll */
+    height: 100vh; /* Asegura que el fondo ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    font-family: 'Arial', sans-serif; /* Asegura que el texto se vea bien sobre el fondo */
+}
